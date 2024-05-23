@@ -1,0 +1,70 @@
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    padding-top:30px;
+    display: flex;
+    flex-direction: column;
+    width: 29.25%;
+    height: 52%;
+    justify-content: center ;
+    background-color: blanchedalmond;
+}
+.edit-icon{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 182px;
+    margin-left: 170px;
+    cursor: pointer;
+}
+.icon{
+    padding-left:20px ;
+    height: 20px;
+    width: 20px;
+}
+.input{
+    margin-left: 40px;
+}
+.picture{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.img-holder {
+    padding-top: 50px;
+    border-radius: 50%;
+    position: relative;
+}
+#icon {
+    width: 163px;
+    height: 164px;
+    object-fit: cover;
+    border-radius: 50%;
+    padding: 0;
+    margin: 0;
+}
+.img-container {
+    width: 29%;
+    height: 275px;
+    display: flex;
+    flex-direction: column;
+    margin: 1px;
+    align-items: center;
+    background-color: blue;
+    position: relative;
+}
+
+img{
+    margin-top: 15px;
+     width: 50%;
+     padding-bottom: 50px;
+}
+
+.file{
+    display: none;
+}

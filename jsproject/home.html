@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link href="home.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="img-container">
+        <div class="img-holder">
+            <img src="./icons8-avatar-64.png" alt="avator" id="icon">
+        </div>
+        <img src="edit.png" alt="edit-icon" class="edit-icon" id="edit" >
+        <input type="file" name="file" id="file" style="display: none;">
+    </div>
+    <div class="container">
+        <div class="picture">
+            <img src="./position_1633314.png" alt="name-icon" class="icon">
+            <h3 id="name" class="input"></h3>
+        </div>
+        <div class="picture">
+            <img src="./briefcase.png" alt="position" class="icon">
+            <h3 id="position" class="input"></h3>
+        </div>
+        <div class="picture">
+            <img src="./mail.png" alt="mail" class="icon">
+            <h3 id="mail" class="input"></h3>
+        </div>
+        <div class="picture">
+            <img src="./telephone_126523.png" alt="mobile" class="icon">
+            <h3 id="mobile" class="input"></h3>
+        </div>
+    </div>
+    <script>
+      document.getElementById("edit").addEventListener('click',function(e){
+          document.getElementById("file").click();     
+      })
+      document.getElementById("file").addEventListener('change',function(e){
+        var file=e.target.files[0];
+        var reader=new FileReader();
+        reader.onload=function(e){
+            document.getElementById("icon").src=e.target.result;
+
+        }
+        reader.readAsDataURL(file);
+      })
+        const name = localStorage.getItem("name");
+        const position = localStorage.getItem("position");
+        const mail = localStorage.getItem("mail");
+        const mobile = localStorage.getItem("mobile");
+        document.getElementById("name").textContent = name;
+        document.getElementById("position").textContent = position;
+        document.getElementById("mail").textContent = mail;
+        document.getElementById("mobile").textContent = mobile;
+    </script>
+</body>
+
+</html>

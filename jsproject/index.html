@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to Profile Page</h1>
+        <form class="form-container" id="form">
+            <div class="input-container">
+                <label>Name :</label>
+                <input type="text" name="name" class="input" id="name" required>
+            </div>
+            <div class="input-container">
+                <label for="position">Position : </label>
+                <input type="text" name="position" class="input" id="position" required>
+            </div>
+            <div class="input-container">
+                <label for="email">Mail Id : </label>
+                <input type="email" name="mail" class="input" id="mail" required>
+            </div>
+            <div class="input-container">
+                <label for="number">Number : </label>
+                <input type="tel" name="mobile" maxlength="10" class="input" id="mobile" required>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script>
+        const form = document.getElementById("form");
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const name = document.getElementById("name").value;
+            const position = document.getElementById("position").value;
+            const mail = document.getElementById("mail").value;
+            const mobile = document.getElementById("mobile").value;
+            localStorage.setItem("name", name);
+            localStorage.setItem("position", position);
+            localStorage.setItem("mail", mail);
+            localStorage.setItem("mobile", mobile);
+            window.location.href = "home.html";
+        })
+    </script>
+</body>
+
+</html>
