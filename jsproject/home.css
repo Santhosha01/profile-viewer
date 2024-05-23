@@ -55,7 +55,7 @@ body {
     flex-direction: column;
     margin: 1px;
     align-items: center;
-    background-color: blue;
+    background-color: rgb(43, 128, 185);
     position: relative;
 }
 
